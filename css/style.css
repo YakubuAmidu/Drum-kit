@@ -9,7 +9,20 @@ h1 {
   text-shadow: 3px 0 #da0463;
 }
 
+.drum {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: red;
+  font-weight: bold;
+  font-size: 2.5rem;
+  border: 2px solid red;
+  margin-left: 10px;
+}
+
+
 footer {
+  margin-top: 5%;
   color: #dbedf3;
   font-family: sans-serif;
 }
