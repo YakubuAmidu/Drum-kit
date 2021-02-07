@@ -5,8 +5,15 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
   document.querySelectorAll('.drum')[i].addEventListener('click', function () {
     var buttonInnerHTML = this.innerHTML;
     makeSound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
   });
 }
+
+// Detecting key press
+document.addEventListener('keypress', function (event) {
+  makeSound(event.key);
+  buttonAnimation(buttonInnerHTML);
+});
 
 function makeSound(key) {
   switch (key) {
@@ -43,10 +50,9 @@ function makeSound(key) {
   }
 }
 
-// Detecting key press
-document.addEventListener('keypress', function (event) {
-  makeSound(event.key);
-});
+function buttonAnimation(currentKey) {
+  var ActiveButton = document.querySelector('.' + currentKey);
+}
 
 // var audio = new Audio('sounds/tom-1.mp3');
 // audio.play();
