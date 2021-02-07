@@ -51,7 +51,11 @@ function makeSound(key) {
 }
 
 function buttonAnimation(currentKey) {
-  var ActiveButton = document.querySelector('.' + currentKey);
+  var activeButton = document.querySelector('.' + currentKey);
+  activeButton.classList.add('pressed');
+  setTimeout(function () {
+    activeButton.classList.remove('pressed');
+  }, 1000);
 }
 
 // var audio = new Audio('sounds/tom-1.mp3');
